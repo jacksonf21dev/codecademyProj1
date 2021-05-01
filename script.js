@@ -9,13 +9,20 @@ const generateTarget = () => {
 }
 
 const compareGuesses = (userGuess, computerGuess, targetNum) => {
-  if ((Math.abs(userGuess - targetNum)) <= (Math.abs(computerGuess - targetNum))) {
+
+  const getAbsoluteDistance = (a, b) => {
+    let theDistance = Math.abs(a - b);
+    return theDistance;
+  }
+
+  if (getAbsoluteDistance(userGuess, targetNum) <= (getAbsoluteDistance(computerGuess, targetNum))) {
     return true;
   }
+
   else {
     return false;
   }
-}
+
 
 const updateScore = (theWinner) => {
   if (theWinner === "human") {
@@ -28,4 +35,5 @@ const updateScore = (theWinner) => {
 
 const advanceRound = () => {
   currentRoundNumber = currentRoundNumber + 1;
+}
 }
