@@ -7,3 +7,12 @@ let currentRoundNumber = 1;
 const generateTarget = () => {
     return Math.floor(Math.random() * 10);
 }
+
+const compareGuesses = (userGuess, computerGuess, targetNum) => {
+  if ((Math.abs(userGuess - targetNum)) <= (Math.abs(computerGuess - targetNum))) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
