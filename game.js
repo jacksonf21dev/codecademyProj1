@@ -27,7 +27,7 @@ guessButton.addEventListener('click', () => {
   
   // Determine if the human or computer wins:
   const humanIsWinner = compareGuesses(currentHumanGuess, computerGuess, target)
-  const winner = humanIsWinner ? 'human' : 'computer'
+  const winner = humanIsWinner ? 'human' : 'computer';
 
   // Update the correct score:
   updateScore(winner);

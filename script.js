@@ -22,18 +22,17 @@ const compareGuesses = (userGuess, computerGuess, targetNum) => {
   else {
     return false;
   }
-
+}
 
 const updateScore = (theWinner) => {
   if (theWinner === "human") {
-    humanScore = humanScore + 1;
+    (humanScore = ++humanScore);
   }
   else if (theWinner === "computer") {
-    computerScore = computerScore + 1;
+    (computerScore = ++computerScore);
   }
 }
 
 const advanceRound = () => {
-  currentRoundNumber = currentRoundNumber + 1;
-}
+  (currentRoundNumber = ++currentRoundNumber);
 }
