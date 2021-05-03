@@ -18,6 +18,13 @@ guessButton.addEventListener('click', () => {
   target = generateTarget();
   // Retrieve the player's guess
   const currentHumanGuess = humanGuessInput.value;
+  
+  if (currentHumanGuess < 0 || currentHumanGuess > 9) {
+    alert("Please enter a number within the range of 0 and 9.");
+  }
+  
+  
+  
   // Make a random 'computer guess'
   const computerGuess = Math.floor(Math.random() * 10);
 
